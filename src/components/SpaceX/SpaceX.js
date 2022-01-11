@@ -8,8 +8,7 @@ const SpaceX = () => {
     useEffect(()=>{
         fetch('https://api.spacexdata.com/v3/launches/')
             .then(value => value.json())
-            .then(value =>setSpace(value))
-
+            .then(value => setSpace(value.filter(value=>value.launch_year !== '2020')))
     },[])
 
     return (
