@@ -8,8 +8,14 @@ const getById = (id) => {
     return fetch(`${url.users}/${id}`)
         .then(value => value.json())
 }
+const getByIdPost = (id) => {
+    return fetch(`${url.posts}/${id}`)
+        .then(value => value.json())
+}
+
 
 export const userService = {
     getAll,
-    getById
+    getById,
+    getByIdPost
 }

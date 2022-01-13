@@ -5,6 +5,9 @@ import {userService} from "../services/services";
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState(null);
+    const [post, setPost] = useState(null);
+
+
 
     useEffect(() => {
         userService.getAll()
@@ -22,12 +25,10 @@ const Users = () => {
             <div>{users.map(value => <User key={value.id} user={value}
                                            getUserId={getUserId}/>)}</div>
 
-            <div className='post'>
-                {user && <div>{user.id} -- {user.username} -- {user.email}</div>}
+            <div className='details'>
+                {user && <div>{user.id} -- {user.username} -- {user.email}-- {user.phone}--{user.website} </div>}
 
             </div>
-
-
 
 
         </div>
