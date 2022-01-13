@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {userService} from "../services/services";
-import User from "./User";
+
 import Post from "./Post";
 
 const Posts = () => {
@@ -24,7 +24,7 @@ const Posts = () => {
     return (
         <div>
 
-            {posts.map(value => <Post key={value.id} user={value}
+            {posts.map(value => <Post key={value.id} post={value}
                                       getPost={getPost}/>)}
 
             <div className='post'>

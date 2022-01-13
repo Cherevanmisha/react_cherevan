@@ -23,7 +23,8 @@ const Users = () => {
                                            getUserId={getUserId}/>)}</div>
 
             <div className='details'>
-                {user && <div>{user.id} -- {user.username} -- {user.email}-- {user.phone}--{user.website} </div>}
+                {user && <div>{user.id} -- {user.username} -- {user.email}--
+                    {user.phone}--{user.website} </div>}
 
             </div>
 
