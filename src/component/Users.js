@@ -5,9 +5,6 @@ import {userService} from "../services/services";
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [user, setUser] = useState(null);
-    const [post, setPost] = useState(null);
-
-
 
     useEffect(() => {
         userService.getAll()
